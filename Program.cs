@@ -4,37 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Programa_del_Monto_en_base_al_pais
+namespace Tabla_de_multiplicar_de_un_numero
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ingrese un Monto: ");
-            double Monto = double.Parse(Console.ReadLine());
+            Console.WriteLine("******** Tabla de Multiplicacion de Numeros ********");
 
-            Console.WriteLine("Ingrese el Codigo del País: ");
-            string codigo = Console.ReadLine();
+            Console.WriteLine("Ingrese un numero");
+            int numero = int.Parse(Console.ReadLine());
 
-            if (codigo == "DO")
+            Console.WriteLine("Tabla de multiplicar del : "+ numero);
+            
 
+            for (int i = 0; i < 13; i++)
             {
-                Monto = Monto * 0.18 + Monto;
-                Console.WriteLine("El Monto de DO es de: " + Monto);
+                  int resultado = numero * i;
+                Console.WriteLine(numero + " x " + i + " = " + resultado);
 
-            }
-            if (codigo == "VZ")
-            {
-                Monto = Monto * 0.12 + Monto;
-                Console.WriteLine("El Monto de VZ es de: " + Monto);
-            }
-            if (codigo == "CS")
-            {
-                Monto = Monto * 0.10 + Monto;
-                Console.WriteLine("El Monto de CS es de: " + Monto);
             }
 
             Console.ReadLine();
         }
+
     }
 }
